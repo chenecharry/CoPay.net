@@ -18,6 +18,11 @@ namespace CoPay
             return Encrypt(message, password);
         }
 
+        public static String decryptMessage(String message, String key)
+        {
+            return Decrypt(message, key);
+        }
+
         //args.name, args.xPubKey, args.requestPubKey
         public static String getCopayerHash(String name, String xPubKey, String requestPubKey)
         {
@@ -106,9 +111,8 @@ namespace CoPay
             return clearText;
         }
 
-        public static string Decrypt(string cipherText)
+        public static string Decrypt(string cipherText, string EncryptionKey = "MAKV2SPBNI99212")
         {
-            string EncryptionKey = "MAKV2SPBNI99212";
             byte[] cipherBytes = Convert.FromBase64String(cipherText);
             using (Aes encryptor = Aes.Create())
             {

@@ -19,7 +19,8 @@ namespace CoPay.Tests
 
             var actual = Utils.signMessage("hola", "09458c090a69a38368975fb68115df2f4b0ab7d1bc463fc60c67aa1730641d6c");
             //should.exist(sig);
-            Assert.AreEqual("3045022100f2e3369dd4813d4d42aa2ed74b5cf8e364a8fa13d43ec541e4bc29525e0564c302205b37a7d1ca73f684f91256806cdad4b320b4ed3000bee2e388bcec106e0280e0", actual);
+            var expected = "1fab6b1331d1be00878833ea620c72bb657ba95a3fa8cc653b3829db359216b0e178384e38f87f92f5a9dee763f480d84fcde86e291b91f4fa699482209d0590e2";
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]

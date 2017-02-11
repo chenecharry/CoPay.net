@@ -19,6 +19,10 @@ namespace CoPay
 
         public String requestPrivKey { get; set; }
 
+        public string personalEncryptingKey { get; set; }
+
+        public string sharedEncryptingKey { get; set; }
+
         //var requestDerivation = xPrivKey.derive(Constants.PATHS.REQUEST_KEY);
         //this.requestPrivKey = requestDerivation.privateKey.toString();
     }
